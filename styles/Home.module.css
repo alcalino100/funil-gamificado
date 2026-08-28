@@ -1,0 +1,553 @@
+/* ==================== CONTAINER ====================*/
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.mainContent {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== HEADER ====================*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logoIcon {
+  font-size: 28px;
+}
+
+.logoText {
+  background: linear-gradient(90deg, #fff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+/* ==================== PROGRESS ====================*/
+.progressContainer {
+  padding: 24px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.progressBar {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.progressText {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #667eea;
+}
+
+/* ==================== STAGE CONTAINER ====================*/
+.stageContainer {
+  flex: 1;
+  padding: 48px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stageIcon {
+  font-size: 64px;
+  margin-bottom: 24px;
+  animation: bounce 0.6s ease-out;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.stageTitle {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stageSubtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 32px 0;
+  font-weight: 500;
+}
+
+/* ==================== FORM ====================*/
+.form {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.formGroup {
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 14px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+.input::placeholder {
+  color: #adb5bd;
+}
+
+/* ==================== OPTIONS GRID ====================*/
+.optionsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.optionButton {
+  padding: 14px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  background: white;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  font-family: inherit;
+}
+
+.optionButton:hover {
+  border-color: #667eea;
+  background: #f8f9ff;
+  transform: translateX(4px);
+}
+
+.optionButton:active {
+  transform: scale(0.98);
+}
+
+.optionButtonActive {
+  border-color: #667eea;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  color: #667eea;
+  font-weight: 600;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* ==================== BUTTONS ====================*/
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  flex: 1;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.buttonPrimary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.buttonPrimary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(102, 126, 234, 0.3);
+}
+
+.buttonPrimary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.buttonPrimary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.buttonSecondary {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.buttonSecondary:hover:not(:disabled) {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.buttonSecondary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ==================== STAGE DOTS ====================*/
+.stageDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.dotActive {
+  width: 24px;
+  background: #667eea;
+  border-radius: 4px;
+}
+
+.dotCompleted {
+  background: #764ba2;
+}
+
+/* ==================== FOOTER ====================*/
+.footer {
+  padding: 16px 24px;
+  background: #f8f9fa;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  border-top: 1px solid #e9ecef;
+}
+
+/* ==================== SUCCESS SCREEN ====================*/
+.successScreen {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: slideUp 0.6s ease-out;
+}
+
+.successContent {
+  background: white;
+  border-radius: 24px;
+  padding: 48px 32px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.successIcon {
+  font-size: 80px;
+  margin-bottom: 24px;
+  animation: bounce 0.8s ease-out;
+}
+
+.successTitle {
+  font-size: 40px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.successSubtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 32px 0;
+}
+
+.pointsDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  border-radius: 16px;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+.pointsNumber {
+  font-size: 48px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pointsLabel {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.discountBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 28px;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  border-radius: 16px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.3);
+}
+
+.discountTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.discountValue {
+  font-size: 40px;
+  font-weight: 800;
+  color: #333;
+  line-height: 1;
+}
+
+.discountText {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.successMessage {
+  text-align: left;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.successMessage p {
+  margin: 8px 0;
+}
+
+.whatsappButton {
+  width: 100%;
+  padding: 16px;
+  background: #25d366;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.whatsappButton:hover {
+  background: #20ba5c;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.3);
+}
+
+.whatsappButton:active {
+  transform: translateY(0);
+}
+
+/* ==================== RESPONSIVE ====================*/
+@media (max-width: 640px) {
+  .mainContent {
+    border-radius: 16px;
+  }
+
+  .header {
+    padding: 16px;
+  }
+
+  .stageContainer {
+    padding: 32px 20px;
+  }
+
+  .stageIcon {
+    font-size: 48px;
+  }
+
+  .stageTitle {
+    font-size: 24px;
+  }
+
+  .stageSubtitle {
+    font-size: 14px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 100%;
+  }
+
+  .successContent {
+    padding: 32px 20px;
+  }
+
+  .successTitle {
+    font-size: 28px;
+  }
+
+  .pointsNumber {
+    font-size: 40px;
+  }
+
+  .discountValue {
+    font-size: 32px;
+  }
+}
+
+/* ==================== ACCESSIBILITY ====================*/
+@media (prefers-reduced-motion: reduce) {
+  .stageIcon,
+  .successIcon,
+  .mainContent,
+  .successContent {
+    animation: none;
+  }
+
+  .progressFill,
+  .input,
+  .optionButton,
+  .dot,
+  .buttonPrimary,
+  .buttonSecondary {
+    transition: none;
+  }
+}
+
+/* ==================== FOCUS STATES ====================*/
+.buttonPrimary:focus-visible,
+.buttonSecondary:focus-visible,
+.input:focus-visible,
+.optionButton:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
